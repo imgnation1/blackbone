@@ -9,6 +9,9 @@
 header {
   box-shadow: #333;
 }
+small {
+  font-size: 11px;
+}
 .header_container {
   background-color: #db2c2b;
   display: flex;
@@ -29,36 +32,75 @@ header {
   margin-left: -30px;
 }
 .main_content {
-  height: fit-content;
+  height: 90vh;
   background: url(./img/bone_hero_img.jpg) no-repeat;
   background-position: top center;
   background-size: contain;
   background-color: #22201e;
   display: grid;
-  align-items: first;
-
+  align-items: center;
   justify-content: center;
 }
-.pricelist_margin {
-  height: 50px;
-}
+
 .pricelist_container {
   max-width: 1000px;
   display: grid;
-  /* align-items: center; */
+  align-items: center;
   /* justify-content: center; */
-  background-color: #333;
+  background-color: #222;
   width: 700px;
-  height: 80vh;
+  height: 70vh;
   border-radius: 15px;
 }
 .btn {
   background-color: #22201e;
+  /* background-color: transparent; */
   color: #f2f3f4;
-  width: 200px;
-  height: 70px;
-  border: #f2f3f4 solid;
+  width: 290px;
+  height: 65px;
+  letter-spacing: 1px;
+  border: #db2c2b solid 1px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.btn:hover {
+  background-color: #db2c2b;
+  border: #22201e 1px solid;
 }
 .pricelist_table {
-  margin: 20px 40px;
+  margin: 10px 60px 0px 60px;
+  height: 43vh;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+  opacity: 0.8;
+  /* letter-spacing: 1px; */
+  line-height: 1.2;
+  font-weight: 500;
+}
+/* .pricelist_table tr:hover {
+  border-bottom: #f2f3f4 1px solid;
+} */
+
+.pricelist_table tr td {
+  text-align: left;
+  /* border-bottom: rgb(192, 184, 184, 0.1) 1px solid; */
+}
+
+.pricelist_table tr td:nth-child(2) {
+  text-align: right;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.pricelist_container p {
+  margin: 0px auto;
+  position: relative;
+  top: -22px;
+  font-size: 14px;
+  color: rgba(219, 211, 211, 0.8);
 }
