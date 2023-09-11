@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+  color: #f2f3f4;
+}
+header {
+  box-shadow: #333;
+}
+small {
+  font-size: 11px;
+}
+.header_container {
+  background-color: #db2c2b;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.header_appointment {
+  scale: 1.2;
+  margin: 14px 0;
+  margin-right: 15px;
+}
+.header_img {
+  display: flex;
+}
+
+.header_img img:nth-child(2) {
+  scale: 0.55;
+  margin-left: -30px;
+}
+.main_content {
+  /* height: 140vh; */
+  background: url(./img/bone_hero_img.jpg) no-repeat;
+  background-position: top center;
+  background-size: contain;
+  background-color: #22201e;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricelist_container {
+  max-width: 1000px;
+  display: grid;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #222;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 700px;
+  height: 70vh;
+  border-radius: 15px;
+}
+.btn {
+  background-color: #22201e;
+  /* background-color: transparent; */
+  color: #f2f3f4;
+  width: 290px;
+  height: 65px;
+  letter-spacing: 1px;
+  border: #db2c2b solid 1px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.btn:hover {
+  background-color: #db2c2b;
+  border: #22201e 1px solid;
+}
+.pricelist_table {
+  margin: 10px 60px 0px 60px;
+  height: 43vh;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+  opacity: 0.8;
+  /* letter-spacing: 1px; */
+  line-height: 1.2;
+  font-weight: 500;
+}
+/* .pricelist_table tr:hover {
+  border-bottom: #f2f3f4 1px solid;
+} */
+
+.pricelist_table tr td {
+  text-align: left;
+  /* border-bottom: rgb(192, 184, 184, 0.1) 1px solid; */
+}
+
+.pricelist_table tr td:nth-child(2) {
+  text-align: right;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.pricelist_container p {
+  margin: 0px auto;
+  position: relative;
+  top: -22px;
+  font-size: 14px;
+  color: rgba(219, 211, 211, 0.8);
+}
+
+.telegram_section {
+  /* display: grid; */
+  /* width: 1000px; */
+  /* height: 30vh; */
+  /* grid-template-columns: 1fr 1fr; */
+  background-color: #22201e;
+  /* margin: auto; */
+}
+.telegram_container {
+  /* width: 800px; */
+  margin: auto;
+  display: grid;
+  width: 900px;
+  height: 45vh;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+.telegram {
+  background-color: #333;
+  display: grid;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  /* width: 400px; */
+  border-radius: 10px;
+  /* height: 25vh; */
+}
+
+.telegram img {
+  height: 60px;
+  margin: 20px auto;
+  /* padding-top: 10px; */
+}
+
+.telegram_text {
+  padding-bottom: 15px;
+  font-size: 17px;
+  padding: 0px 10px;
+}
+
+.telegram_text a {
+  text-decoration: none;
+  color: #419fd9;
+}
+
+.heshtag_text {
+  display: grid;
+  margin-top: 20px;
+  /* width: 400px; */
+
+  /* height: 30vh;	 */
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+  /* text-justify: inter-cluster; */
+}
+
+.heshtag_text p {
+  text-align: justify;
+  padding: 0px 25px;
+  opacity: 0.9;
+}
+
+.blackhash {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  margin: auto;
+}
