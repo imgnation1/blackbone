@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп Москва - мужская парикмахерская</title>
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./gallary.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a6eb112351.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -23,7 +28,7 @@
         </div>
         <div class="header_appointment">
           <a href="http://google.com">
-            <img src="./img/bone_call.svg" alt="" />
+            <img src="./img/bone_call.svg" class="img_scale" alt="" />
           </a>
         </div>
       </div>
@@ -72,6 +77,60 @@
         </table>
         <button class="btn pricelist_btn">Записаться Онлайн</button>
         <p>Временно оплата только наличными</p>
+      </div>
+    </section>
+    <section class="telegram_section">
+      <div class="telegram_container">
+        <div class="telegram">
+          <img src="./img/beard.png" alt="" />
+          <div class="telegram_text">
+            <p>
+              Подписывайтесь на наш <a href="telegram.com">Телеграм</a> канал,
+              там бесплатные стрижки и подарки
+            </p>
+          </div>
+        </div>
+        <div class="heshtag_text">
+          <p>
+            Мы устали от сумасшедших цен на МУЖСКИЕ стрижки и решили сделать эту
+            услугу более доступной, вместе с тем, не теряя качество сервиса и
+            уникальной атмосферы! Будь уверен, у нас ты можешь качественно
+            постричься или подровнять бороду, а после оставить свои нервы за PS4
+            или выплеснуть долю тестостерона на боксерской груше. Приходи к нам
+            и почувствуй Черную Кость!
+          </p>
+        </div>
+        <p class="blackhash">#BLACKBONE</p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery_text"><h2>Работы Наших Мастеров</h2></div>
+      <div class="groups">
+        <div class="group" data-index="0" data-status="active">
+          <div class="img1 card"></div>
+          <div class="img2 card"></div>
+        </div>
+        <div class="group" data-index="1" data-status="unknown">
+          <div class="img3 card"></div>
+          <div class="img4 card"></div>
+        </div>
+        <div class="group" data-index="2" data-status="unknown">
+          <div class="img5 card"></div>
+          <div class="img6 card"></div>
+        </div>
+      </div>
+      <div class="swipers">
+        <button class="button_right">
+          <i class="fa-solid fa-right-long"></i>
+        </button>
+        <button class="button_left">
+          <i class="fa-solid fa-left-long"></i>
+        </button>
+      </div>
+      <div class="gallery_points">
+        <div class="point" data-status="active" data-index="0"></div>
+        <div class="point" data-status="unknown" data-index="1"></div>
+        <div class="point" data-status="unknown" data-index="2"></div>
       </div>
     </section>
   </body>
