@@ -41,23 +41,40 @@ const onLeftClick = () => {
   currentGroup.forEach((item) => {
     item.dataset.status = "before";
   });
-  // currentGroup.dataset.status = "before";
-  // next group becomes active
   nextGroup.forEach((item) => {
     item.dataset.status = "becoming-active-from-after";
   });
-  // nextGroup.dataset.status = "becoming-active-from-after";
 
   setTimeout(() => {
     nextGroup.forEach((item) => {
       item.dataset.status = "active";
     });
-    // nextGroup.dataset.status = "active";
     activeIndex = nextIndex;
   });
-  // console.log(activeIndex);
 };
 
 rightButton.addEventListener("click", onRightClick);
 leftButton.addEventListener("click", onLeftClick);
 console.log(document.querySelector(".main_content").parentElement);
+
+// Dropdown
+const dropdownButton = document.querySelector(".dropdown_wrapper");
+const dropdownContent = document.querySelector(".dropdown_content");
+const arrowFa = document.querySelector(".btn_wrapper i");
+dropdownContent.style.display = "none";
+
+// dropdownContent.style.display = "none";
+dropdownButton.addEventListener("click", () => {
+  // console.log(1);
+  if (dropdownContent.style.display === "none") {
+    dropdownContent.style.display = "block";
+  } else {
+    dropdownContent.style.display = "none";
+  }
+  if (dropdownContent.style.display === "block") {
+    arrowFa.classList.replace("fa-angle-down", "fa-angle-up");
+  } else {
+    arrowFa.classList.replace("fa-angle-up", "fa-angle-down");
+  }
+});
+console.log(document.querySelector(".dropdown_adress p:first-child"));
