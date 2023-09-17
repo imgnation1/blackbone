@@ -12,10 +12,7 @@
 
   color: #f2f3f4;
 }
-body {
-  /* width: 100vw; */
-  /* overflow: hidden;	 */
-}
+
 header {
   box-shadow: #333;
   position: sticky;
