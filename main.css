@@ -324,3 +324,10 @@ small {
   opacity: 1;
   font-size: 19px;
 }
+.fa-2x {
+  transition: all 300ms ease;
+}
+
+.dropdown_wrapper:hover .fa-2x {
+  transform: scale(1.3);
+}
