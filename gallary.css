@@ -152,3 +152,8 @@
 .point[data-status="active-from-before"] {
   background-color: #f2f2f2;
 }
+.gallery h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+}
