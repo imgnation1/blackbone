@@ -1,18 +1,20 @@
 /* Галлерея */
 .gallery {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   background-color: var(--background-color);
   display: grid;
-  /* grid-template-rows: (0.3fr, 1fr, 1fr, 1fr); */
+  grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
-  /* position: relative; */
+  position: relative;
 }
 .groups,
 .group {
   width: 45vmin;
   /* aspect-ratio: 5/7; */
-  margin-top: -10%;
+  position: absolute;
+  top: 25%;
+  /* transform: translateX(-10%); */
 }
 
 .card {
@@ -92,7 +94,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-820%, -180%);
+  transform: translate(-850%, -60%);
 }
 .swipers .button_right {
   font-size: 2.5vmin;
@@ -106,8 +108,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(720%, -180%);
+  transform: translate(750%, -60%);
 }
+
 .button_right:hover,
 .button_left:hover {
   color: var(--main-color);
@@ -127,14 +130,16 @@
 .gallery_points {
   display: flex;
   position: relative;
-  width: 100px;
+  width: 150px;
   justify-content: space-between;
+  /* top: 50px; */
 }
 .point {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   /* background-color: #fff; */
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .point[data-status="active"] {
@@ -156,4 +161,24 @@
   text-transform: uppercase;
   font-size: 28px;
   font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .gallery {
+    padding-top: 50px;
+  }
+  .groups {
+    /* margin-top: 10px; */
+  }
+  .gallery_text {
+    margin-bottom: 100px;
+  }
+  .gallery_points {
+    margin-top: 100px;
+  }
+  .swipers .button_left {
+    transform: translate(-820%, -70%);
+  }
+  .swipers .button_right {
+    transform: translate(720%, -70%);
+  }
 }
