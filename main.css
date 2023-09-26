@@ -97,6 +97,7 @@ small {
   text-transform: uppercase;
   margin: auto;
   transition: transform 500ms ease;
+  cursor: pointer;
 }
 
 .btn:hover {
