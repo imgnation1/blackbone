@@ -55,7 +55,37 @@ const onLeftClick = () => {
 
 rightButton.addEventListener("click", onRightClick);
 leftButton.addEventListener("click", onLeftClick);
-console.log(document.querySelector(".main_content").parentElement);
+// кнопки
+
+function setActivePoint(index) {
+  points.forEach((point, i) => {
+    if (i === index) {
+      point.dataset.status = "active";
+    } else {
+      point.dataset.status = "before";
+    }
+  });
+}
+function setActiveGroup(index) {
+  groups.forEach((group, i) => {
+    if (i === index) {
+      group.dataset.status = "active";
+    } else {
+      group.dataset.status = "before";
+    }
+  });
+}
+function onPointClick() {}
+
+const points = document.querySelectorAll(".point");
+points.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    activeIndex = index;
+    setActivePoint(activeIndex);
+    setActiveGroup(activeIndex);
+  });
+});
+console.log(points);
 
 // Dropdown
 const dropdownButton = document.querySelectorAll(".dropdown_wrapper");
