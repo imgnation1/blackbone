@@ -87,6 +87,26 @@ points.forEach((item, index) => {
 });
 console.log(points);
 
+// LightBox
+const card = document.querySelectorAll(".card");
+// console.log(card);
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox_image");
+const lightboxCard = document.createElement("div");
+card.forEach((card) => {
+  card.addEventListener("click", () => {
+    lightboxCard.classList = card.classList;
+    lightboxCard.classList.remove("card");
+    lightboxCard.classList.add("lightbox_image");
+    console.log(lightboxCard);
+    lightboxImage.appendChild(lightboxCard);
+    lightbox.classList.remove("hidden");
+  });
+});
+lightbox.addEventListener("click", () => {
+  lightbox.classList.add("hidden");
+  lightboxImage.removeChild(lightboxCard);
+});
 // Dropdown
 const dropdownButton = document.querySelectorAll(".dropdown_wrapper");
 // const dropdownContent = document.querySelector(".dropdown_content");
