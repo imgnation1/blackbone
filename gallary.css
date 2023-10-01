@@ -181,18 +181,22 @@
 .lightbox_i {
   position: relative;
   aspect-ratio: 3/2;
-  width: 80%;
+  width: 90%;
   /* height: 90%; */
   /* margin: auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 1000px;
   max-height: 800px;
-  top: 10%;
+  /* top: 10%; */
+  /* left: 3%; */
 }
 .lightbox_image {
   /* position: relative; */
   aspect-ratio: 3/2;
-  width: 90%;
-
+  width: 80%;
+  margin-top: 7%;
   /* height: 90%; */
   background-color: #333;
   background-position: center;
@@ -204,7 +208,25 @@
 .hidden {
   display: none !important;
 }
-
+/* Кнопки в лайтбоксе */
+#lightbox button {
+  width: 10%;
+  height: 80%;
+  margin-top: 7%;
+  background-color: #333;
+  text-decoration: none;
+  z-index: 5;
+}
+.lightbox_wrapper {
+  position: absolute;
+  max-width: 1000px;
+  max-height: 800px;
+  aspect-ratio: 3/2;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 1024px) {
   .gallery {
     padding-top: 50px;

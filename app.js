@@ -88,25 +88,47 @@ points.forEach((item, index) => {
 console.log(points);
 
 // LightBox
-const card = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 // console.log(card);
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox_image");
 const lightboxCard = document.createElement("div");
-card.forEach((card) => {
+const nextButton = document.querySelector(".lightbox_right");
+const previousButton = document.querySelector(".lightbox_left");
+console.log(previousButton);
+let currentIndex = 0;
+cards.forEach((card, index) => {
   card.addEventListener("click", () => {
-    lightboxCard.classList = card.classList;
-    lightboxCard.classList.remove("card");
-    lightboxCard.classList.add("lightbox_image");
-    console.log(lightboxCard);
-    lightboxImage.appendChild(lightboxCard);
+    currentIndex = index;
+    updateImage();
     lightbox.classList.remove("hidden");
   });
 });
-lightbox.addEventListener("click", () => {
+
+function updateImage() {
+  lightboxCard.classList = cards[currentIndex].classList;
+  // console.log(currentIndex);
+  lightboxCard.classList.remove("card");
+  lightboxCard.classList.add("lightbox_image");
+  lightboxImage.appendChild(lightboxCard);
+}
+lightboxCard.addEventListener("click", () => {
   lightbox.classList.add("hidden");
   lightboxImage.removeChild(lightboxCard);
 });
+previousButton.addEventListener("click", () => {
+  console.log("her");
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateImage();
+});
+nextButton.addEventListener("click", () => {
+  console.log("her");
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateImage();
+});
+// LightBox button
+// Обнвление изображения
+
 // Dropdown
 const dropdownButton = document.querySelectorAll(".dropdown_wrapper");
 // const dropdownContent = document.querySelector(".dropdown_content");
