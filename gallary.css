@@ -26,12 +26,15 @@
   /* transform: translateY(-20%); */
 }
 
+.card:hover {
+  /* opacity: 0; */
+}
 .group > .card:nth-child(1) {
-  transform: translateX(-55%);
+  transform: translateX(-52%);
   background-color: rgba(219, 211, 211, 0.6);
 }
 .group > .card:nth-child(2) {
-  transform: translateX(55%);
+  transform: translateX(52%);
   background-color: rgba(219, 211, 211, 0.6);
 }
 .img1 {
@@ -82,6 +85,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 0vmin 4vmin;
   position: relative;
 }
@@ -96,9 +100,9 @@
   width: 7vmin;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-1190%, -40%);
+  /* top: 60%; */
+  left: 4%;
+  /* transform: translate(-1190%, -40%); */
 }
 .swipers .button_right {
   font-size: 2.5vmin;
@@ -110,15 +114,21 @@
   width: 7vmin;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(1090%, -40%);
+  /* top: 50%; */
+  left: 92%;
+  /* transform: translate(1090%, -40%); */
 }
 
 .button_right:hover,
 .button_left:hover {
-  color: var(--main-color);
+  opacity: 0.9;
   border-color: var(--main-color);
+  transform: scale(1.1);
+}
+.button_left:hover i,
+.button_right:hover i {
+  color: var(--main-color);
+  opacity: 0.9;
 }
 
 .gallery_text {
@@ -136,7 +146,7 @@
   position: relative;
   width: 150px;
   justify-content: space-between;
-  top: 50px;
+  /* top: 50px; */
 }
 .point {
   width: 12px;
@@ -213,9 +223,15 @@
   width: 10%;
   height: 80%;
   margin-top: 7%;
-  background-color: #333;
+  background-color: rgba(59, 59, 59, 0);
+  opacity: 0.9;
   text-decoration: none;
   z-index: 5;
+  outline: none;
+  border: none;
+}
+#lightbox button:hover {
+  background-color: #db2c2b;
 }
 .lightbox_wrapper {
   position: absolute;
