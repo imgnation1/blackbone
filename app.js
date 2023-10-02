@@ -116,6 +116,12 @@ lightboxCard.addEventListener("click", () => {
   lightbox.classList.add("hidden");
   lightboxImage.removeChild(lightboxCard);
 });
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    lightbox.classList.add("hidden");
+    lightboxImage.removeChild(lightboxCard);
+  }
+});
 previousButton.addEventListener("click", () => {
   console.log("her");
   currentIndex = (currentIndex - 1 + cards.length) % cards.length;
@@ -131,11 +137,7 @@ nextButton.addEventListener("click", () => {
 
 // Dropdown
 const dropdownButton = document.querySelectorAll(".dropdown_wrapper");
-// const dropdownContent = document.querySelector(".dropdown_content");
-// const arrowFa = document.querySelector(".btn_wrapper i");
-// dropdownContent.style.display = "none";
 
-// dropdownContent.style.display = "block";
 const onClick = () => {
   if (dropdownContent.style.display === "none") {
     dropdownContent.style.display = "block";
@@ -156,7 +158,6 @@ dropdownButton.forEach((item) => {
     const arrowFa = parent.querySelector(".btn_wrapper i");
 
     if (dropdownContent.style.display === "block") {
-      // dropdownContent.style.display = "none";
       dropdownContent.style.display = "none";
     } else {
       dropdownContent.style.display = "block";
@@ -168,16 +169,3 @@ dropdownButton.forEach((item) => {
     }
   });
 });
-
-//   if (dropdownContent.style.display === "none") {
-//     dropdownContent.style.display = "block";
-//   } else {
-//     dropdownContent.style.display = "none";
-//   }
-//   if (dropdownContent.style.display === "block") {
-//     arrowFa.classList.replace("fa-angle-down", "fa-angle-up");
-//   } else {
-//     arrowFa.classList.replace("fa-angle-up", "fa-angle-down");
-//   }
-// });
-// console.log(document.querySelector(".dropdown_adress p:first-child"));
