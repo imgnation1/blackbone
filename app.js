@@ -69,9 +69,15 @@ function setActivePoint(index) {
 function setActiveGroup(index) {
   groups.forEach((group, i) => {
     if (i === index) {
-      group.dataset.status = "active";
+      group.dataset.status = "becoming-active-from-before";
+      setTimeout(() => {
+        group.dataset.status = "active";
+      });
     } else {
-      group.dataset.status = "before";
+      group.dataset.status = "becoming-active-from-after";
+      setTimeout(() => {
+        group.dataset.status = "before";
+      });
     }
   });
 }
@@ -88,6 +94,7 @@ points.forEach((item, index) => {
 console.log(points);
 
 // LightBox
+const wrapper = document.querySelectorAll(".img_wrapper");
 const cards = document.querySelectorAll(".card");
 // console.log(card);
 const lightbox = document.getElementById("lightbox");
@@ -97,7 +104,7 @@ const nextButton = document.querySelector(".lightbox_right");
 const previousButton = document.querySelector(".lightbox_left");
 console.log(previousButton);
 let currentIndex = 0;
-cards.forEach((card, index) => {
+wrapper.forEach((card, index) => {
   card.addEventListener("click", () => {
     currentIndex = index;
     updateImage();
