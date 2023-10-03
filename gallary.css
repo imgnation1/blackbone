@@ -7,6 +7,7 @@
   grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 .groups,
 .group {
@@ -18,7 +19,6 @@
 .card {
   width: 70vmin;
   aspect-ratio: 3/2;
-
   background-color: #333;
   position: absolute;
   border: #222 2px solid;
@@ -29,11 +29,11 @@
 .card:hover {
   /* opacity: 0; */
 }
-.group > .card:nth-child(1) {
+.group > .img_wrapper:nth-child(1) {
   transform: translateX(-52%);
   background-color: rgba(219, 211, 211, 0.6);
 }
-.group > .card:nth-child(2) {
+.group > .img_wrapper:nth-child(2) {
   transform: translateX(52%);
   background-color: rgba(219, 211, 211, 0.6);
 }
@@ -67,23 +67,35 @@
   background-size: cover;
   cursor: pointer;
 }
-
+.group {
+  transition: transform 500ms;
+  /* overflow: hidden; */
+}
 .group[data-status="unknown"] {
   transform: scale(0);
 }
 .group[data-status="after"] {
-  transform: translateX(50%) scale(0);
+  transform: translateX(75%) scale(0);
 }
 .group[data-status="before"] {
-  transform: translateX(-50%) scale(0);
+  transform: translateX(-75%) scale(0);
 }
 .group[data-status="active"] {
   transition-delay: 300ms;
 }
-
+.group[data-status="becoming-active-from-before"] {
+  transform: translateX(-75%) scale(0);
+  transition: none;
+}
+.group[data-status="becoming-active-from-after"] {
+  transform: translateX(75%) scale(0);
+  transition: none;
+}
 .swipers {
   display: flex;
   width: 100%;
+  max-width: 1400px;
+  /* min-width: 900px; */
   justify-content: space-between;
   align-items: center;
   padding: 0vmin 4vmin;
@@ -92,7 +104,7 @@
 
 .swipers .button_left {
   font-size: 2.5vmin;
-  border: 0.4vmin solid rgb(200, 200, 200);
+  border: 0.3vmin solid rgb(200, 200, 200);
   border-radius: 100%;
   color: white;
   background-color: transparent;
@@ -101,12 +113,12 @@
   cursor: pointer;
   position: absolute;
   /* top: 60%; */
-  left: 4%;
+  left: 2%;
   /* transform: translate(-1190%, -40%); */
 }
 .swipers .button_right {
   font-size: 2.5vmin;
-  border: 0.4vmin solid rgb(200, 200, 200);
+  border: 0.3vmin solid rgb(200, 200, 200);
   border-radius: 100%;
   color: white;
   background-color: transparent;
@@ -123,7 +135,7 @@
 .button_left:hover {
   opacity: 0.9;
   border-color: var(--main-color);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .button_left:hover i,
 .button_right:hover i {
@@ -168,7 +180,7 @@
 .point[data-status="before"] {
   background-color: #f2f2f2;
 }
-.point[data-status="active-from-before"] {
+.point[data-status="becoming-active-from-before"] {
   background-color: #f2f2f2;
 }
 .gallery h2 {
@@ -212,7 +224,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: default;
+  cursor: pointer;
   border: #222 2px solid;
 }
 .hidden {
@@ -232,6 +244,7 @@
 }
 #lightbox button:hover {
   background-color: #db2c2b;
+  cursor: pointer;
 }
 .lightbox_wrapper {
   position: absolute;
@@ -243,23 +256,84 @@
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 1024px) {
+
+/* hover effect */
+.img_wrapper {
+  position: absolute;
+  width: 70vmin;
+  aspect-ratio: 3/2;
+  cursor: pointer;
+}
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #f2f3f4;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.img_wrapper:hover .gradient,
+.img_wrapper:hover .caption {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) and (min-width: 700px) {
   .gallery {
-    padding-top: 50px;
+    /* padding-top: 50px; */
   }
   .groups {
     /* margin-top: 10px; */
   }
   .gallery_text {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
-  .gallery_points {
-    margin-top: 100px;
+
+  .groups,
+  .group {
+    width: 65vmin;
+    aspect-ratio: 3/2;
+    position: absolute;
   }
-  .swipers .button_left {
-    transform: translate(-820%, -70%);
+  .card {
+    width: 65vmin;
+    aspect-ratio: 3/2;
+  }
+  .img_wrapper {
+    position: absolute;
+    width: 65vmin;
+    aspect-ratio: 3/2;
+  }
+}
+@media (max-width: 700px) {
+  .groups .group {
+    display: grid;
+  }
+  .group > .img_wrapper:nth-child(1) {
+    transform: none;
+  }
+  .group > .img_wrapper:nth-child(2) {
+    transform: none;
+  }
+  .swipers {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vmin 4vmin;
+    position: relative;
   }
   .swipers .button_right {
-    transform: translate(720%, -70%);
+    left: 2%;
   }
 }
