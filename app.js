@@ -74,7 +74,7 @@ function setActiveGroup(index) {
         group.dataset.status = "active";
       });
     } else {
-      group.dataset.status = "becoming-active-from-after";
+      group.dataset.status = "before";
       setTimeout(() => {
         group.dataset.status = "before";
       });
