@@ -127,7 +127,7 @@
   cursor: pointer;
   position: absolute;
   /* top: 50%; */
-  left: 92%;
+  left: 94%;
   /* transform: translate(1090%, -40%); */
 }
 
@@ -270,7 +270,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  background: linear-gradient(to bottom, transparent, rgba(58, 15, 15, 0.8));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -288,42 +288,76 @@
   opacity: 1;
 }
 
-@media (max-width: 1024px) and (min-width: 700px) {
-  .gallery {
-    /* padding-top: 50px; */
-  }
-  .groups {
-    /* margin-top: 10px; */
-  }
+@media (max-width: 1024px) and (min-width: 750px) {
   .gallery_text {
     margin-bottom: 50px;
   }
 
   .groups,
   .group {
-    width: 65vmin;
+    width: 50vmin;
     aspect-ratio: 3/2;
     position: absolute;
   }
   .card {
-    width: 65vmin;
+    width: 50vmin;
     aspect-ratio: 3/2;
   }
   .img_wrapper {
     position: absolute;
-    width: 65vmin;
+    width: 50vmin;
     aspect-ratio: 3/2;
   }
+
+  .swipers .button_right {
+    left: 52%;
+  }
+  .swipers .button_left {
+    left: 42%;
+  }
+  .swipers {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    top: 100%;
+  }
+  .gallery_points {
+    top: -30%;
+  }
+  .point {
+    width: 10px;
+    height: 10px;
+  }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .groups .group {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    /* position: absolute; */
   }
   .group > .img_wrapper:nth-child(1) {
-    transform: none;
+    top: -15%;
+    left: 52%;
   }
   .group > .img_wrapper:nth-child(2) {
-    transform: none;
+    top: 15%;
+    left: -52%;
+  }
+  .groups,
+  .group {
+    width: 50vmin;
+    aspect-ratio: 3/2;
+    position: absolute;
+  }
+  .card {
+    width: 50vmin;
+    aspect-ratio: 3/2;
+  }
+  .img_wrapper {
+    position: absolute;
+    width: 50vmin;
+    aspect-ratio: 3/2;
   }
   .swipers {
     display: flex;
@@ -335,5 +369,8 @@
   }
   .swipers .button_right {
     left: 2%;
+  }
+  .footer_button .btn {
+    width: 300px;
   }
 }
