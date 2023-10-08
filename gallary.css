@@ -14,10 +14,13 @@
   width: 70vmin;
   aspect-ratio: 3/2;
   position: absolute;
+  max-width: 700px;
 }
 
 .card {
   width: 70vmin;
+  max-width: 700px;
+
   aspect-ratio: 3/2;
   background-color: #333;
   position: absolute;
@@ -92,10 +95,10 @@
   transition: none;
 }
 .swipers {
+  margin: 0;
   display: flex;
   width: 100%;
-  max-width: 1400px;
-  /* min-width: 900px; */
+  max-width: 1700px;
   justify-content: space-between;
   align-items: center;
   padding: 0vmin 4vmin;
@@ -112,9 +115,7 @@
   width: 7vmin;
   cursor: pointer;
   position: absolute;
-  /* top: 60%; */
   left: 2%;
-  /* transform: translate(-1190%, -40%); */
 }
 .swipers .button_right {
   font-size: 2.5vmin;
@@ -126,9 +127,7 @@
   width: 7vmin;
   cursor: pointer;
   position: absolute;
-  /* top: 50%; */
-  left: 94%;
-  /* transform: translate(1090%, -40%); */
+  left: 93%;
 }
 
 .button_right:hover,
@@ -204,22 +203,16 @@
   position: relative;
   aspect-ratio: 3/2;
   width: 90%;
-  /* height: 90%; */
-  /* margin: auto; */
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 1200px;
   max-height: 800px;
-  /* top: 10%; */
-  /* left: 3%; */
 }
 .lightbox_image {
-  /* position: relative; */
   aspect-ratio: 3/2;
   width: 80%;
   margin-top: 7%;
-  /* height: 90%; */
   background-color: #333;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,7 +225,7 @@
 }
 /* Кнопки в лайтбоксе */
 #lightbox button {
-  width: 10%;
+  width: 40%;
   height: 80%;
   margin-top: 7%;
   background-color: rgba(59, 59, 59, 0);
@@ -242,16 +235,21 @@
   outline: none;
   border: none;
 }
+#lightbox button:nth-child(1) {
+  transform: translateX(25%);
+}
+#lightbox button:nth-child(2) {
+  transform: translateX(-25%);
+}
 #lightbox button:hover {
-  background-color: #db2c2b;
   cursor: pointer;
 }
 .lightbox_wrapper {
   position: absolute;
-  max-width: 1000px;
+  max-width: 1200px;
   max-height: 800px;
   aspect-ratio: 3/2;
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,6 +259,7 @@
 .img_wrapper {
   position: absolute;
   width: 70vmin;
+  max-width: 700px;
   aspect-ratio: 3/2;
   cursor: pointer;
 }
@@ -295,17 +294,17 @@
 
   .groups,
   .group {
-    width: 50vmin;
+    width: 48vmin;
     aspect-ratio: 3/2;
     position: absolute;
   }
   .card {
-    width: 50vmin;
+    width: 48vmin;
     aspect-ratio: 3/2;
   }
   .img_wrapper {
     position: absolute;
-    width: 50vmin;
+    width: 48vmin;
     aspect-ratio: 3/2;
   }
 
@@ -369,8 +368,5 @@
   }
   .swipers .button_right {
     left: 2%;
-  }
-  .footer_button .btn {
-    width: 300px;
   }
 }

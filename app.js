@@ -114,14 +114,17 @@ wrapper.forEach((card, index) => {
 
 function updateImage() {
   lightboxCard.classList = cards[currentIndex].classList;
-  // console.log(currentIndex);
   lightboxCard.classList.remove("card");
   lightboxCard.classList.add("lightbox_image");
   lightboxImage.appendChild(lightboxCard);
 }
-lightboxCard.addEventListener("click", () => {
-  lightbox.classList.add("hidden");
-  lightboxImage.removeChild(lightboxCard);
+lightbox.addEventListener("click", (e) => {
+  if (e.target === nextButton || e.target === previousButton) {
+    return;
+  } else {
+    lightbox.classList.add("hidden");
+    lightboxImage.removeChild(lightboxCard);
+  }
 });
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -130,12 +133,10 @@ document.addEventListener("keydown", (event) => {
   }
 });
 previousButton.addEventListener("click", () => {
-  console.log("her");
   currentIndex = (currentIndex - 1 + cards.length) % cards.length;
   updateImage();
 });
 nextButton.addEventListener("click", () => {
-  console.log("her");
   currentIndex = (currentIndex + 1) % cards.length;
   updateImage();
 });
