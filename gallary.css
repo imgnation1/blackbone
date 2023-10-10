@@ -287,6 +287,8 @@
   opacity: 1;
 }
 
+@media (min-width: 1921px) {
+}
 @media (max-width: 1024px) and (min-width: 750px) {
   .gallery_text {
     margin-bottom: 50px;
