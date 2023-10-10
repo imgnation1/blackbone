@@ -163,6 +163,8 @@
   width: 12px;
   height: 12px;
   /* background-color: #fff; */
+  background: transparent;
+  border: 1px var(--main-color) solid;
   border-radius: 100%;
   cursor: pointer;
 }
@@ -171,16 +173,16 @@
   background-color: #db2c2b;
 }
 .point[data-status="unknown"] {
-  background-color: #f2f3f4;
+  background-color: transparent;
 }
 .point[data-status="after"] {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 .point[data-status="before"] {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 .point[data-status="becoming-active-from-before"] {
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 .gallery h2 {
   text-transform: uppercase;
@@ -246,7 +248,7 @@
 }
 .lightbox_wrapper {
   position: absolute;
-  max-width: 1200px;
+  max-width: 1300px;
   max-height: 800px;
   aspect-ratio: 3/2;
   width: 80%;
@@ -287,7 +289,7 @@
   opacity: 1;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1970px) {
 }
 @media (max-width: 1024px) and (min-width: 750px) {
   .gallery_text {
@@ -314,16 +316,16 @@
     left: 52%;
   }
   .swipers .button_left {
-    left: 42%;
+    left: 40%;
   }
   .swipers {
     display: flex;
     width: 100%;
     max-width: 800px;
-    top: 100%;
+    top: 80%;
   }
   .gallery_points {
-    top: -30%;
+    top: 10%;
   }
   .point {
     width: 10px;
