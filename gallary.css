@@ -127,7 +127,7 @@
   width: 7vmin;
   cursor: pointer;
   position: absolute;
-  left: 93%;
+  left: 94%;
 }
 
 .button_right:hover,
@@ -291,7 +291,67 @@
 
 @media (min-width: 1970px) {
 }
-@media (max-width: 1024px) and (min-width: 750px) {
+@media (max-width: 1390px) and (min-width: 1075px) {
+  .groups,
+  .group {
+    width: 53vmin;
+    aspect-ratio: 3/2;
+    position: absolute;
+    max-width: 550px;
+  }
+
+  .card {
+    width: 53vmin;
+  }
+  .img_wrapper {
+    position: absolute;
+    width: 53vmin;
+  }
+  .swipers {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vmin 4vmin;
+    position: relative;
+  }
+  .swipers .button_left {
+    font-size: 2.5vmin;
+    border: 0.3vmin solid rgb(200, 200, 200);
+    border-radius: 100%;
+    color: white;
+    background-color: transparent;
+    height: 7vmin;
+    width: 7vmin;
+    cursor: pointer;
+    position: absolute;
+    left: 1%;
+  }
+  .swipers .button_right {
+    font-size: 2.5vmin;
+    border: 0.3vmin solid rgb(200, 200, 200);
+    border-radius: 100%;
+    color: white;
+    background-color: transparent;
+    height: 7vmin;
+    width: 7vmin;
+    cursor: pointer;
+    position: absolute;
+    left: auto;
+    right: 1%;
+  }
+  .group > .img_wrapper:nth-child(1) {
+    transform: translateX(-51%);
+    background-color: rgba(219, 211, 211, 0.6);
+  }
+  .group > .img_wrapper:nth-child(2) {
+    transform: translateX(51%);
+    background-color: rgba(219, 211, 211, 0.6);
+  }
+}
+@media (max-width: 1075px) and (min-width: 651px) {
   .gallery_text {
     margin-bottom: 50px;
   }
@@ -332,11 +392,11 @@
     height: 10px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 650px) {
   .groups .group {
     display: flex;
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
     /* position: absolute; */
   }
   .gallery {
@@ -348,30 +408,33 @@
     transform: translateX(-50%);
   }
   .group > .img_wrapper:nth-child(1) {
-    transform: translateY(55%);
+    transform: translateY(47%);
   }
   .group > .img_wrapper:nth-child(2) {
-    transform: translateY(-50%);
+    transform: translateY(-55%);
   }
   .groups,
   .group {
     width: 70vmin;
+    max-width: 350px;
     aspect-ratio: 3/2;
     position: absolute;
   }
   .card {
     width: 70vmin;
+    max-width: 350px;
     aspect-ratio: 3/2;
   }
   .img_wrapper {
     position: absolute;
+    max-width: 350px;
     width: 70vmin;
     aspect-ratio: 3/2;
   }
   .swipers {
     display: flex;
     position: absolute;
-    bottom: -105%;
+    bottom: -110%;
 
     width: 20%;
     justify-content: space-between;
@@ -393,6 +456,8 @@
     background-color: transparent;
     height: 10vmin;
     width: 10vmin;
+    max-width: 55px;
+    max-height: 55px;
     left: auto;
   }
   .swipers .button_left {
@@ -404,6 +469,8 @@
     background-color: transparent;
     height: 10vmin;
     width: 10vmin;
+    max-width: 55px;
+    max-height: 55px;
   }
   .point {
     width: 11px;
